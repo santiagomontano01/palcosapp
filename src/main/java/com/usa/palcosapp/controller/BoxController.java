@@ -23,7 +23,7 @@ public class BoxController {
     }
 
     @GetMapping("/{idBox}")
-    public Optional<Box> getById(@PathVariable("idBox") Integer id){
+    public Optional<Box> getById(@PathVariable("idBox") Integer id)     {
         return boxService.getById(id);
     }
 
@@ -41,7 +41,7 @@ public class BoxController {
 
     @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public Boolean delete(@PathVariable ("id") Integer id){
+    public boolean delete(@PathVariable ("id") Integer id){
         return boxService.delete(id);
     }
 }
